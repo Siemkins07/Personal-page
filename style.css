@@ -10,15 +10,20 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.intro {
-  color: #ff793f;
+section {
   text-align: center;
+}
+
+.sectionTitle {
+  display: inline-block;
+  color: #F77027;
   padding: 40px 0 10px;
   font-size: 46px;
   z-index: 2;
+  border-bottom: solid 5px #F77027;
 }
 
-.line {
+.titleLine {
   width: 100px;
   height: 10px;
   background-color: #34495e;
@@ -45,20 +50,27 @@ body {
   background-size: cover;
   background-position: center;
   opacity: .6;
-  animation: zoom 20s 4s linear infinite;
+  animation: zoom 20s 4s linear forwards;
 }
 
 @keyframes zoom {
   0% {
     transform: scale(1);
+    opacity: .6;
   }
 
   50% {
     transform: scale(1.5);
+    opacity: .6;
+  }
+
+  95% {
+    opacity: 0;
   }
 
   100% {
     transform: scale(1);
+    /* opacity: 0.6; */
   }
 }
 
@@ -70,7 +82,7 @@ body {
   width: 100%;
   max-width: 80%;
   text-align: center;
-  color: #FF5722;
+  color: #F77027;
   z-index: 1;
 }
 
@@ -112,23 +124,23 @@ header p {
   display: inline-block;
   margin-top: 30px;
   padding: 12px 20px;
-  color: #FF5722;
+  color: #F77027;
   text-decoration: none;
   text-transform: uppercase;
-  border: 2px solid #FF5722;
+  border: 2px solid #F77027;
   border-radius: 4px;
   transition: .7s linear;
 }
 
 a:hover {
   color: white;
-  border-color: #F44336;
-  background-color: #F44336;
+  border-color: #F77027;
+  background-color: #F77027;
 }
 
 .about-me {
   height: 100vh;
-  background: linear-gradient(to top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(to top, #232537 0%, #101119 100%);
 }
 
 .about-me .photo {
@@ -154,7 +166,7 @@ a:hover {
 }
 
 .about-me span {
-  color: #cd6133;
+  color: #F77027;
 }
 
 .portfolio {
@@ -197,9 +209,10 @@ a:hover {
 
 .portfolio ul li input[type="radio"] {
   position: relative;
-  z-index: 1;
   height: 20px;
   width: 20px;
+  z-index: 1;
+  margin: 2px;
 }
 
 .portfolio ul li input[type="radio"]:checked~.slide {
@@ -258,7 +271,7 @@ a:hover {
   animation: zoom-portfolio 40s linear infinite;
 }
 
-.portfolio .intro {
+.portfolio .sectionTitle {
   position: absolute;
   top: 0;
   left: 50%;
@@ -268,7 +281,7 @@ a:hover {
   z-index: 2
 }
 
-.portfolio .line {
+.portfolio .titleLine {
   position: absolute;
   top: 15%;
   left: 50%;
@@ -296,10 +309,11 @@ a:hover {
 
 .contact {
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(to bottom, #232537 0%, #090A0E 100%);
 }
 
 .contact p {
+  margin: 10px;
   text-align: center;
   color: #ddd;
   font-size: 16px;
@@ -375,7 +389,7 @@ div.social-icons a {
 }
 
 .social-icons a:hover {
-  background-color: #F44336;
+  background-color: #F77027;
   color: aliceblue;
 }
 
@@ -386,7 +400,7 @@ footer {
   width: 100%;
   height: 60px;
   line-height: 60px;
-  background-color: #FF5722;
+  background-color: #F77027;
   text-align: center;
   font-size: 22px;
   color: aliceblue;
@@ -394,11 +408,11 @@ footer {
 
 @media (max-width: 1440px) {
 
-  .line {
+  .titleLine {
     height: 6px;
   }
 
-  .intro {
+  .sectionTitle {
     padding: 30px 0 0;
     font-size: 36px;
   }
@@ -411,7 +425,7 @@ footer {
 
 @media (max-width: 1280px) {
 
-  .portfolio .line {
+  .portfolio .titleLine {
     height: 6px;
   }
 
@@ -423,7 +437,7 @@ footer {
 
 @media (max-width: 1024px) {
 
-  .intro {
+  .sectionTitle {
     padding: 20px 0 0;
     font-size: 30px;
   }
@@ -443,7 +457,7 @@ footer {
     font-size: 16px;
   }
 
-  .intro {
+  .sectionTitle {
     font-size: 24px;
   }
 
