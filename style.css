@@ -8,6 +8,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 section {
@@ -143,21 +144,11 @@ a:hover {
   background: linear-gradient(to top, #232537 0%, #101119 100%);
 }
 
-.about-me .photo {
-  height: 90%;
-  background-image: url(img/photo-me.png);
-  background-size: 35%;
-  background-repeat: no-repeat;
-  background-position: right bottom 10%;
-  background-attachment: fixed;
-  z-index: 10;
-}
-
 .about-me .container {
   width: 65vw;
 }
 
-.about-me p {
+.container p {
   margin: 3% 6% 3%;
   font-size: 22px;
   line-height: 1.6;
@@ -168,6 +159,23 @@ a:hover {
 .about-me span {
   color: #F77027;
 }
+
+.about-me .photo {
+  height: 90%;
+  background-image: url(img/photo-me.png);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: right bottom 20%;
+  background-attachment: scroll;
+  /* transform: translateX(100vw); */
+  transition: .7s;
+}
+
+/* in progress */
+/* .about-me .photo.active {
+  transform: translateX(0vw);
+  
+} */
 
 .portfolio {
   height: 100vh;
