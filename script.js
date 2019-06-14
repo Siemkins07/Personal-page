@@ -4,19 +4,30 @@ $('#more').on('click', function () {
   }, 1000)
 })
 
-// $(document).on('scroll', function () {
+$(document).on('scroll', function () {
 
-//   const windowHeight = $(window).height()
-//   const scrollValue = $(this).scrollTop();
-//   const $photo = $('.photo')
-//   const fromTop = $photo.offset().top;
-//   const photoHeight = $photo.height()
+  const windowHeight = $(window).height();
+  const scrollValue = $(this).scrollTop();
+  const $photo = $('.photo');
+  const fromTop = $photo.offset().top;
+  const photoHeight = $photo.height();
 
-//   if (scrollValue > fromTop + photoHeight - windowHeight - 120) {
-//     $photo.addClass('active')
-//   }
+  const $about = $('.container')
+  const aboutHeight = $about.height();
 
-//   if (scrollValue < 100) {
-//     $('div').removeClass('active')
-//   }
-// })
+  if (scrollValue > fromTop + aboutHeight - windowHeight) {
+    $about.addClass('shown');
+  }
+  if (scrollValue < 100) {
+    $('div').removeClass('shown');
+  }
+
+  if (scrollValue > fromTop + photoHeight - windowHeight - 120) {
+    $photo.addClass('active');
+    $about.addClass('shown');
+  }
+  if (scrollValue < 100) {
+    $('div').removeClass('active');
+    $('div').removeClass('shown');
+  }
+})
