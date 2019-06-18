@@ -359,7 +359,7 @@ textarea.contact-form-text {
   margin-top: 10px;
   border-radius: 4px;
   cursor: pointer;
-  transition: .5s;
+  transition: background-color .5s;
   font-size: 18px;
   text-decoration: none;
 }
