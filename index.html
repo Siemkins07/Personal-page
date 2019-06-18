@@ -19,11 +19,12 @@
     <header>
       <div class="title">
         <h1>
-          Jacek Pobiar<span>ż</span>yn
+          Jacek
+          <div>Pobiar<span>ż</span>yn</div>
         </h1>
         <div class="title-line"></div>
-        <p>Frontend developer z ludzką twarzą</p>
-        <a id="more" href="#about-me">Poznajmy się</a>
+        <p>Front-end developer z ludzką twarzą</p>
+        <a id="more" href="#about-me">Zapraszam</a>
       </div>
     </header>
   </div>
@@ -32,17 +33,17 @@
       <h2 class="sectionTitle">O mnie</h2>
       <div class="photo">
         <div class="container">
-
-          <p>Cześć, mam na imię Jacek i jestem zajaranym Frontendem 35 latkiem, który otworzył się na
-            <span>nowe technologie</span> i
-            postanowił zagłębić się w świat IT. Tworzeniem stron i aplikacji oraz programowaniem zająłem się w 2018
+          <p>Cześć, mam na imię Jacek i jestem zajaranym front-endem 35 latkiem, który otworzył się na
+            nowe technologie i postanowił zagłębić się w świat IT. Tworzeniem <span>stron i aplikacji</span> oraz
+            programowaniem zająłem się w 2018
             roku,
-            wcześniej byłem m.in. testerem oprogramowania (ok. 2 lata, posiadam certyfikat ISTQB fl).</p>
-          <p>Technologie, z których głównie korzystam to: <span>HTML5, CSS3, JavaScript, ReactJS.</span> Miałem również
+            wcześniej byłem m.in. testerem oprogramowania (ok. 2 lata, posiadam certyfikat ISTQB).</p>
+          <p>Technologie, z których głównie korzystam, to: <span>HTML5</span>, <span>CSS3</span>,
+            <span>JavaScript</span>, <span>React JS.</span> Miałem
+            również
             do czynienia z WordPressem (Woocomerce) i jQuery. W razie potrzeby potrafię skorzystać z Bootstrapa,
             rozumiem filozofię Material Design, wiem co to preprocesory SASS i SCSS, a w swoich projektach Korzystam z
-            GITa. Dbam o responsywność, ponieważ mam świadomość jak ważny udział w dziesiejszym świecie posiadają
-            urządzenia mobilne.</p>
+            GITa. Dbam o responsywność.</p>
           <p>Wierzę, że jestem na początku wymagającej, ale wspaniałej drogi, jaką jest frontend development, a
             <span>juniorskie stanowisko</span> jest na niej tylko jednym z wielu kroków, które czekają mnie w
             niedalekiej przyszłości.
@@ -52,11 +53,10 @@
         <img src="img/photo-me.png" alt="my_photo">
       </div>
       </div>
-
     </section>
     <section class="portfolio">
       <div class="container">
-        <h2 class="sectionTitle">Wybrane projekty</h2>
+        <h2 class="sectionTitle">Portfolio</h2>
         <ul>
           <li>
             <input type="radio" checked="checked" name="slide">
@@ -79,8 +79,8 @@
               <div class="content">
                 <h2>SPA</h2>
                 <p>Projekt strony internetowej typu SPA stworzonej w React (CRA), gdzie wykorzystałem m.in bibliotekę
-                  React Router. Do kompletu HTML5 oraz CSS3. Za treść posłużyły fragmenty mojej książki, w której
-                  tematem przewodnim jest TDU. Zapraszam do lektury.
+                  React Router. Do kompletu HTML5 oraz CSS3. Za treść posłużyły fragmenty mojej książki. Zapraszam do
+                  lektury.
                 </p>
                 <br>
                 <a class="more" href="https://siemkins07.github.io/SPA_jg/">Zobacz</a>
@@ -120,7 +120,7 @@
             <div class="slide">
               <img src="img/doors-1690423_1920.jpg" alt="foto">
               <div class="content">
-                <h2>Klasyka gatunku</h2>
+                <h2>Klasyka</h2>
                 <p>Miałeś kiedyś tyle pecha, że trudno było Ci uwierzyć, że to w ogóle jest możliwe? W tej wersji gry
                   Papier Kamień Nożyce w końcu możesz się zrewanżować i wyjść obronną ręką nawet z najgorszej
                   sytuacji. HTML5, CSS3 i JS są
@@ -150,7 +150,7 @@
             <div class="slide">
               <img src="img/question-mark-1872665_1920.jpg" alt="">
               <div class="content">
-                <h2>Kolejny krok</h2>
+                <h2>Kolejny krok?</h2>
                 <p>Wkrótce nowe projekty, m.in z wykorzystaniem frameworku React JS, eksperymenty z CSSem, może Vue? Już
                   teraz serdeczne zapraszam.</p>
               </div>
@@ -161,13 +161,14 @@
     </section>
     <section class="contact">
       <h2 class="sectionTitle">Kontakt</h2>
-      <p>Masz pytania? Zadania? Uwagi? Pomysł? Poniższe opcje są do Twojej dyspozycji. Nie krępuj się.</p>
+      <p>Jeśli chcesz możesz zostawić mi wiaodmość. Pozostańmy w kontakcie!</p>
       <form class="contact-form" action="index.html" method="post">
         <input type="text" class="contact-form-text" placeholder="Imię">
         <input type="email" class="contact-form-text" placeholder="E-mail">
         <input type="text" class="contact-form-text" placeholder="Telefon">
-        <textarea class="contact-form-text" placeholder="Twoja wiadomość"></textarea>
-        <input type="submit" class="contact-form-btn" value="Wyślij">
+        <textarea class="contact-form-text" placeholder="Twoja wiadomość..."></textarea>
+        <!-- <input type="submit" class="contact-form-btn" value="Wyślij"> -->
+        <a class="contact-form-btn" type="submit" href="#">Wyślij</a>
       </form>
       <div class="social-icons">
         <a href="https://www.facebook.com/jacek.pobiarzyn"><i class="fab fa-facebook"></i></a>

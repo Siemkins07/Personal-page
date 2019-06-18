@@ -18,17 +18,10 @@ section {
 .sectionTitle {
   display: inline-block;
   color: #F77027;
-  padding: 40px 0 10px;
-  font-size: 46px;
+  padding: 20px 0 4px;
+  font-size: 22px;
   z-index: 2;
-  border-bottom: solid 5px #F77027;
-}
-
-.titleLine {
-  width: 100px;
-  height: 10px;
-  background-color: #34495e;
-  margin: 10px auto;
+  border-bottom: solid 3px #F77027;
 }
 
 .wallper {
@@ -87,7 +80,7 @@ section {
 }
 
 .title h1 {
-  font-size: 60px;
+  font-size: 44px;
   text-transform: uppercase;
 }
 
@@ -109,20 +102,21 @@ section {
 }
 
 .title-line {
-  height: 6px;
-  max-width: 30%;
-  margin: 15px auto;
+  height: 4px;
+  max-width: 40%;
+  margin: 10px auto;
   background-color: #607D8B;
 }
 
 header p {
-  margin-top: 6px;
+  margin-top: 10px;
   color: white;
+  font-size: 22px;
 }
 
 .title a {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 80px;
   padding: 12px 20px;
   color: #F77027;
   text-decoration: none;
@@ -140,29 +134,29 @@ a:hover {
 
 .about-me {
   background: linear-gradient(to top, #232537 0%, #101119 100%);
-  /* min-height: 100vh;*/
 }
 
 .about-me .container {
-  width: 65vw;
-  transform: scale(0) rotate(-400deg);
-  transition: .8s linear;
+  width: 96vw;
+  margin: 0 auto;
+  transform: scale(0) translateX(-100vw);
+  transition: transform .8s ease-in-out;
 }
 
-.about-me .container.shown {
-  transform: scale(1) rotate(0);
+.container.shown {
+  transform: scale(1) translateX(0);
 }
 
 .about-me .photo {
   display: flex;
 }
 
-.container p {
+.container.shown p {
   margin: 3% 6% 3%;
-  font-size: 22px;
-  line-height: 1.6;
-  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
   color: #ddd;
+  text-align: center;
 }
 
 .about-me span {
@@ -170,19 +164,22 @@ a:hover {
 }
 
 .about-me .photo img {
+  display: none;
   height: 100%;
   position: relative;
+  flex-basis: 35%;
   align-self: flex-end;
+  margin-bottom: 90px;
   transform: translateX(100%);
   opacity: 0;
   transition: transform 1.4s, opacity 2s;
   transition-timing-function: cubic-bezier(0.46, 0.03, 0.43, 1.33);
-  transition-delay: .5s;
+  transition-delay: .3s;
 }
 
 .about-me .photo.active img {
-  opacity: 1;
-  transform: translateX(0vw);
+  opacity: .8;
+  transform: translateX(-5vw);
 }
 
 .portfolio {
@@ -205,10 +202,6 @@ a:hover {
   width: 100%;
   height: 100%;
   margin: 0 0 40px;
-}
-
-.portfolio p {
-  color: #111;
 }
 
 .portfolio ul li {
@@ -247,27 +240,29 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, .9);
-  padding: 40px;
+  padding: 20px;
   border-radius: 4px;
   max-width: 600px;
+  width: 84%;
 }
 
 .portfolio ul li .slide .content h2 {
-  font-size: 42px;
+  font-size: 32px;
 }
 
 .portfolio ul li .slide .content p {
-  font-size: 18px;
+  font-size: 16px;
+  color: #111;
 }
 
 .portfolio ul li .slide .content .more {
   position: absolute;
   bottom: 0%;
   right: 0%;
-  font-size: 16px;
+  font-size: 18px;
   padding: 20px 40px;
   text-decoration: none;
-  transition: .7s;
+  transition: .5s;
   color: #34495e;
 }
 
@@ -300,18 +295,6 @@ a:hover {
   z-index: 2
 }
 
-.portfolio .titleLine {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 10px;
-  background-color: #34495e;
-  margin: 10px auto;
-  z-index: 1
-}
-
 @keyframes zoom-portfolio {
   0% {
     transform: scale(1);
@@ -335,7 +318,7 @@ a:hover {
   margin: 10px;
   text-align: center;
   color: #ddd;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .contact-form {
@@ -348,10 +331,10 @@ a:hover {
 .contact-form-text {
   display: block;
   width: 100%;
-  margin: 16px 0;
+  margin: 6px 0;
   border: 0;
   background-color: #111;
-  padding: 20px 40px;
+  padding: 10px 20px;
   outline: none;
   color: #ddd;
   transition: .5s;
@@ -372,10 +355,13 @@ textarea.contact-form-text {
   border: none;
   background-color: #34495e;
   color: white;
-  padding: 10px 40px;
+  padding: 10px 30px;
+  margin-top: 10px;
   border-radius: 4px;
   cursor: pointer;
   transition: .5s;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .contact-form-btn:hover {
@@ -386,6 +372,7 @@ div.social-icons {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 10px;
 }
 
 div.social-icons a {
@@ -396,8 +383,8 @@ div.social-icons a {
   text-align: center;
   line-height: 40px;
   margin: 16px 5px;
-  color: #111111;
-  transition: .7s;
+  color: #111;
+  transition: .5s;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -421,115 +408,308 @@ footer {
   line-height: 60px;
   background-color: #F77027;
   text-align: center;
-  font-size: 22px;
+  font-size: 16px;
   color: aliceblue;
   text-transform: uppercase;
 }
 
-@media (max-width: 1440px) {
-
-  .titleLine {
-    height: 6px;
+@media (orientation: portrait) and (min-width: 360px) {
+  .title h1 {
+    font-size: 50px;
   }
 
   .sectionTitle {
-    padding: 30px 0 0;
-    font-size: 36px;
-  }
-
-  .about-me p {
-    line-height: 1.5;
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 1280px) {
-
-  .portfolio .titleLine {
-    height: 6px;
-  }
-
-  .about-me p {
-    line-height: 1.4;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1024px) {
-
-  .sectionTitle {
-    padding: 20px 0 0;
-    font-size: 30px;
-  }
-
-  .about-me p {
-    font-size: 18px;
-  }
-
-  .portfolio ul li .slide .content {
-    width: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .about-me p {
-    font-size: 16px;
-  }
-
-  .sectionTitle {
-    font-size: 24px;
-  }
-
-  .portfolio ul li .slide .content {
-    padding: 20px;
-    width: 80%;
-  }
-
-  .portfolio ul li .slide .content h2 {
-    font-size: 20px;
+    font-size: 26px;
   }
 
   .portfolio ul li .slide .content p {
-    font-size: 16px;
-  }
-
-  .portfolio ul li .slide .content .more {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .contact p {
-    font-size: 14px;
-  }
-
-  textarea.contact-form-text {
-    height: 80px;
+    padding: 10px auto;
+    font-size: 16px;
   }
 
   .contact-form-text {
     margin: 12px 0;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    font-size: 16px;
   }
 
-  div.social-icons a {
-    width: 36px;
-    line-height: 36px;
-    margin: 12px 5px;
+  .contact-form-btn {
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  div.social-icons {
+    margin-top: 10px;
+  }
+
+  footer {
+    font-size: 18px;
   }
 }
 
-@media (max-width: 560px) {
+@media (orientation: portrait) and (min-width: 768px) {
+  .sectionTitle {
+    font-size: 50px;
+  }
 
-  .about-me p {
-    font-size: 14px;
-    line-height: 1.4;
+  .title h1 {
+    margin-top: -150px;
+    font-size: 80px;
+  }
+
+  header p {
+    font-size: 30px;
+  }
+
+  .title a {
+    font-size: 30px;
+    margin-top: 140px
+  }
+
+  .container.shown p {
+    font-size: 24px;
+  }
+
+  .portfolio ul li .slide .content h2 {
+    font-size: 48px;
+  }
+
+  .portfolio ul li .slide .content p {
+    font-size: 28px;
+  }
+
+  .portfolio ul li .slide .content .more {
+    font-size: 24px;
+  }
+
+  .portfolio ul li input[type="radio"] {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+  }
+
+  .contact p {
+    margin: 10px 20px;
+    padding: 20px auto;
+    font-size: 26px;
+  }
+
+  .contact-form-text {
+    margin: 12px 0;
+    padding: 25px 20px;
+    font-size: 22px;
+  }
+
+  .contact-form-btn {
+    padding: 15px 35px;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  div.social-icons {
+    margin-top: 140px;
+  }
+
+  div.social-icons a {
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .social-icons a i {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  footer {
+    font-size: 32px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 533px) {
+  .sectionTitle {
+    padding: 6px 0 4px;
+  }
+
+  .title h1 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .title a {
+    font-size: 20px;
+    margin-top: 40px
+  }
+
+  .portfolio ul li {
+    margin: 0 0 10px;
+  }
+
+  .portfolio ul li .slide .content {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .portfolio ul li .slide .content h2 {
+    font-size: 24px;
+  }
+
+  .portfolio ul li .slide .content p {
+    margin: 0 10px;
+  }
+
+  .portfolio ul li .slide .content .more {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .contact-form-text {
+    padding: 6px 12px;
+  }
+
+  textarea.contact-form-text {
+    height: 60px;
+  }
+
+  div.social-icons {
+    margin: -60px -20px 0 0;
+  }
+
+  footer {
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  .portfolio ul li .slide .content {
+    width: 84%;
+  }
+
+  .portfolio ul li .slide .content h2 {
+    font-size: 30px;
+  }
+
+  footer {
+    font-size: 26px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 44px;
+  }
+
+  .title h1 {
+    font-size: 84px;
+  }
+
+  header p {
+    font-size: 44px;
+  }
+
+  .title a {
+    font-size: 36px;
+    margin-top: 140px
   }
 
   .about-me .container {
-    width: 100%;
+    width: 60%;
+    margin: 10px;
   }
 
-  .about-me .photo {
-    background-position: right bottom;
+  .container.shown p:nth-child(1) {
+    width: 120vh;
+  }
+
+  .container.shown p:nth-last-child(1) {
+    width: 120vh;
+  }
+
+  .container.shown p {
+    text-align: left;
+    font-size: 26px;
+  }
+
+  .about-me .photo img {
+    display: inline-block;
+  }
+
+  .portfolio ul li .slide .content {
+    width: 60%;
+  }
+
+  .portfolio ul li .slide .content h2 {
+    font-size: 50px;
+  }
+
+  .portfolio ul li .slide .content p {
+    text-align: center;
+    margin: 40px 20px;
+    font-size: 28px;
+  }
+
+  .portfolio ul li .slide .content p:nth-last-child(1) {
+    width: 94%;
+  }
+
+  .portfolio ul li .slide .content .more {
+    font-size: 26px;
+  }
+
+  .portfolio ul li input[type="radio"] {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+  }
+
+  .contact p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 26px;
+  }
+
+  textarea.contact-form-text {
+    height: 120px;
+  }
+
+  .contact-form-text {
+    margin: 12px 0;
+    padding: 20px 20px;
+    font-size: 22px;
+  }
+
+  .contact-form-btn {
+    padding: 15px 35px;
+    font-size: 24px;
+  }
+
+  div.social-icons {
+    margin-top: 60px;
+  }
+
+  div.social-icons a {
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .social-icons a i {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  footer {
+    font-size: 36px;
   }
 }

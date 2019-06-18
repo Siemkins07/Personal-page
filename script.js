@@ -15,14 +15,14 @@ $(document).on('scroll', function () {
   const $about = $('.container')
   const aboutHeight = $about.height();
 
-  if (scrollValue > fromTop + aboutHeight - windowHeight) {
+  if (scrollValue > fromTop + aboutHeight - windowHeight - 250) {
     $about.addClass('shown');
   }
-  if (scrollValue < 100) {
+  if (scrollValue < 140) {
     $('div').removeClass('shown');
   }
 
-  if (scrollValue > fromTop + photoHeight - windowHeight - 120) {
+  if (scrollValue > fromTop + photoHeight - windowHeight - 210) {
     $photo.addClass('active');
     $about.addClass('shown');
   }
