@@ -222,15 +222,15 @@ a:hover {
 
 .portfolio ul li input[type="radio"] {
   position: relative;
-  height: 20px;
-  width: 20px;
+  height: 26px;
+  width: 26px;
   z-index: 1;
   margin: 2px;
 }
 
 .portfolio ul li input[type="radio"]:checked~.slide {
   transform: rotateY(0deg);
-  transition: transform 0.5s;
+  transition: transform .9s;
   transform-origin: right;
 }
 
