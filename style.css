@@ -274,7 +274,7 @@ a:hover {
 }
 
 .portfolio ul li .slide img {
-  object-fit: cover;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -282,7 +282,7 @@ a:hover {
 }
 
 .portfolio ul li input[type="radio"]:checked~.slide img {
-  animation: zoom-portfolio 40s linear infinite;
+  animation: zoom-portfolio 30s linear infinite;
 }
 
 .portfolio .sectionTitle {
@@ -301,7 +301,7 @@ a:hover {
   }
 
   50% {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
 
   100% {
@@ -595,6 +595,10 @@ footer {
 
   .portfolio ul li .slide .content h2 {
     font-size: 30px;
+  }
+
+  textarea.contact-form-text {
+    height: 90px;
   }
 
   footer {
