@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -259,7 +263,7 @@ a:hover {
   position: absolute;
   bottom: 0%;
   right: 0%;
-  font-size: 18px;
+  font-size: 16px;
   padding: 20px 40px;
   text-decoration: none;
   transition: .5s;
@@ -278,6 +282,8 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
@@ -310,7 +316,7 @@ a:hover {
 }
 
 .contact {
-  height: 100vh;
+  /* min-height: 100vh; */
   background: linear-gradient(to bottom, #232537 0%, #090A0E 100%);
 }
 
@@ -326,6 +332,7 @@ a:hover {
   margin: auto;
   padding: 0 10px;
   overflow: hidden;
+
 }
 
 .contact-form-text {
@@ -339,6 +346,7 @@ a:hover {
   color: #ddd;
   transition: .5s;
   border-radius: 4px;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-form-text:hover {
@@ -348,6 +356,7 @@ a:hover {
 textarea.contact-form-text {
   resize: none;
   height: 120px;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-form-btn {
@@ -475,6 +484,10 @@ footer {
     font-size: 24px;
   }
 
+  .portfolio ul li .slide .content {
+    width: 70%;
+  }
+
   .portfolio ul li .slide .content h2 {
     font-size: 48px;
   }
@@ -508,11 +521,11 @@ footer {
   .contact-form-btn {
     padding: 15px 35px;
     font-size: 26px;
-    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
   }
 
   div.social-icons {
-    margin-top: 140px;
+    padding: 30px 0;
   }
 
   div.social-icons a {
@@ -608,7 +621,10 @@ footer {
   }
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+
+
+
+@media (min-width: 1024px) {
   .sectionTitle {
     font-size: 44px;
   }
@@ -632,7 +648,7 @@ footer {
   }
 
   .container.shown p:nth-child(1) {
-    width: 120vh;
+    width: 70vh;
   }
 
   .container.shown p:nth-last-child(1) {
@@ -642,6 +658,10 @@ footer {
   .container.shown p {
     text-align: left;
     font-size: 26px;
+  }
+
+  .about-me {
+    overflow-x: hidden;
   }
 
   .about-me .photo img {
@@ -715,5 +735,28 @@ footer {
 
   footer {
     font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .container.shown p:nth-child(1) {
+    width: 120vh;
+  }
+
+  div.social-icons {
+    padding: 20px 0;
+  }
+}
+
+@media (orientation: portrait) {
+  .portfolio ul li .slide img {
+    height: 100%;
+
+  }
+}
+
+@media (orientation: landscape) {
+  .portfolio ul li .slide img {
+    width: 100%;
   }
 }
