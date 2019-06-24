@@ -178,7 +178,7 @@ a:hover {
   opacity: 0;
   transition: transform 1.4s, opacity 2s;
   transition-timing-function: cubic-bezier(0.46, 0.03, 0.43, 1.33);
-  transition-delay: .3s;
+  transition-delay: .2s;
 }
 
 .about-me .photo.active img {
@@ -210,7 +210,7 @@ a:hover {
 
 .portfolio ul li {
   list-style: none;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 }
 
 .portfolio ul li .slide {
@@ -255,6 +255,7 @@ a:hover {
 }
 
 .portfolio ul li .slide .content p {
+  padding: 10px 0;
   font-size: 16px;
   color: #111;
 }
@@ -263,8 +264,8 @@ a:hover {
   position: absolute;
   bottom: 0%;
   right: 0%;
-  font-size: 16px;
-  padding: 20px 40px;
+  font-size: 14px;
+  padding: 15px 25px;
   text-decoration: none;
   transition: .5s;
   color: #34495e;
@@ -316,7 +317,6 @@ a:hover {
 }
 
 .contact {
-  /* min-height: 100vh; */
   background: linear-gradient(to bottom, #232537 0%, #090A0E 100%);
 }
 
@@ -579,7 +579,7 @@ footer {
 
   .portfolio ul li .slide .content .more {
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 15px 25px;
   }
 
   .contact-form-text {
@@ -620,9 +620,6 @@ footer {
     line-height: 60px;
   }
 }
-
-
-
 
 @media (min-width: 1024px) {
   .sectionTitle {
@@ -737,6 +734,19 @@ footer {
     font-size: 36px;
   }
 }
+
+@media (min-width: 1024px) and (orientation:portrait) {
+  .portfolio ul li .slide .content p {
+    line-height: 1.6;
+    font-size: 32px;
+  }
+
+  .portfolio ul li .slide .content .more {
+    font-size: 30px;
+  }
+}
+
+
 
 @media (min-width: 1024px) and (orientation: landscape) {
   .container.shown p:nth-child(1) {

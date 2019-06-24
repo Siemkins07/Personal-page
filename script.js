@@ -1,33 +1,21 @@
-// $('#more').on('click', function () {
-//   $('body, html').animate({
-//     scrollTop: $('.about-me').offset().top
-//   }, 2000)
-// })
+window.addEventListener('scroll', function () {
+  const photo = document.querySelector('.photo');
+  const photoHeight = photo.clientHeight;
+  const about = document.querySelector('.container');
+  const aboutHeight = about.clientHeight;
+  const fromTop = photo.offsetTop;
+  const windowHeight = window.innerHeight
+  const scrollValue = this.window.scrollY
 
-$(document).on('scroll', function () {
-
-  const windowHeight = $(window).height();
-  const scrollValue = $(this).scrollTop();
-  const $photo = $('.photo');
-  const fromTop = $photo.offset().top;
-  const photoHeight = $photo.height();
-
-  const $about = $('.container')
-  const aboutHeight = $about.height();
-
-  if (scrollValue > fromTop + aboutHeight - windowHeight - 250) {
-    $about.addClass('shown');
-  }
-  if (scrollValue < 140) {
-    $('div').removeClass('shown');
+  if (scrollValue > fromTop + aboutHeight - windowHeight - 150) {
+    about.classList.add('shown')
+  } else if (scrollValue < 120) {
+    about.classList.remove('shown')
   }
 
-  if (scrollValue > fromTop + photoHeight - windowHeight - 210) {
-    $photo.addClass('active');
-    $about.addClass('shown');
-  }
-  if (scrollValue < 100) {
-    $('div').removeClass('active');
-    $('div').removeClass('shown');
+  if (scrollValue > fromTop + photoHeight - windowHeight - 100) {
+    photo.classList.add('active')
+  } else if (scrollValue < 170) {
+    photo.classList.remove('active')
   }
 })
