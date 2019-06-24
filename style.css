@@ -679,7 +679,7 @@ footer {
 
   .portfolio ul li .slide .content p {
     text-align: center;
-    margin: 40px 20px;
+    margin: 20px 40px 20px;
     font-size: 28px;
   }
 
@@ -750,8 +750,6 @@ footer {
   }
 }
 
-
-
 @media (min-width: 1024px) and (orientation: landscape) {
   .container.shown p:nth-child(1) {
     width: 120vh;
@@ -769,7 +767,7 @@ footer {
   }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 1366px) {
   .portfolio ul li .slide img {
     width: 100%;
   }
